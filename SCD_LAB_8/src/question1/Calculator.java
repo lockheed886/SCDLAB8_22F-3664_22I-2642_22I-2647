@@ -8,6 +8,10 @@ public class Calculator {
         return num1 + num2;
     }
 
+    public int multiplication(int num1, int num2) {
+        return num1 * num2;
+    }
+
     public int getValidInput(Scanner scanner, String prompt) {
         int num;
         while (true) {
@@ -17,7 +21,7 @@ public class Calculator {
                 break;
             } catch (InputMismatchException e) {
                 System.out.println("Invalid input. Please enter a valid integer.");
-                scanner.next(); 
+                scanner.next();
             }
         }
         return num;
@@ -30,8 +34,11 @@ public class Calculator {
         int n1 = cal.getValidInput(s, "Enter the 1st number: ");
         int n2 = cal.getValidInput(s, "Enter the 2nd number: ");
         
-        int ans = cal.addition(n1, n2);
-        System.out.println("Ans: " + ans);
+        int additionResult = cal.addition(n1, n2);
+        System.out.println("Addition result: " + additionResult);
+
+        int multiplicationResult = cal.multiplication(n1, n2);
+        System.out.println("Multiplication result: " + multiplicationResult);
 
         s.close();
     }
