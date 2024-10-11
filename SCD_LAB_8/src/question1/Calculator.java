@@ -1,28 +1,29 @@
 package question1;
-
 import java.util.Scanner;
 
 public class Calculator {
 
-   
-    public int multiplication(int a, int b) {
-        return a * b;
-    }
+	public int addition(int num1, int num2)
+	{
+		return (num1+num2);
+	}
 
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        
-        System.out.print("Enter the first number: ");
-        int num1 = scanner.nextInt();
-        
-        System.out.print("Enter the second number: ");
-        int num2 = scanner.nextInt();
-        
-        Calculator calc = new Calculator();
-        int result = calc.multiplication(num1, num2);
-        
-        System.out.println("Multiplication result: " + result);
-        
-        scanner.close();
-    }
+	public static void main(String[] args) {
+		
+		Calculator cal =  new Calculator();
+		Scanner s = new Scanner(System.in);
+		
+		int n1 = 5, n2 = 10;
+		System.out.println("Enter the 1st number: ");
+		n1 = s.nextInt();
+		
+		System.out.println("Enter the 2nd number: ");
+		n2 = s.nextInt();
+		
+		int ans = cal.addition(n1, n2);
+		System.out.println("Ans: " + ans);
+
+	}
+
+
 }
